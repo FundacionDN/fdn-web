@@ -586,29 +586,42 @@
                             <label>Servicio</label>
                             <select id="servicio">
                                 <option value="">Seleccione un servicio</option>
-                                <option value="Consulta General">Consulta General</option>
-                                <option value="Psicología">Psicología</option>
-                                <option value="Nutrición">Nutrición</option>
-                                <option value="Odontología">Odontología</option>
-                                <option value="OPediatría">Odontología Pediatríco</option>
-                                <option value="Ginecología">Ginecología</option>
-                                <option value="Neurología">Neurología</option>
-                                <option vlaue="Anesteciología">Anesteciología</option>
-                                <option value="Cirugía General">Cirugía General</option>
+                                <option value="Anesteciología">Anesteciología</option>
+                                <option value="Cardiología">Cardiología</option>
                                 <option value="Cirugía bucal">Cirugía Bucal</option>
                                 <option value="Cirugía Carviovascular">Cirugía Cardiovascular</option>
                                 <option value="Cirugía de Columna">Cirugía de Columna</option>
-                                <option value="Hematología">Hematología</option>
+								<option value="Cirugía General">Cirugía General</option>
+								<option value="Consulta General">Consulta General</option>
                                 <option value="Ecografía">Ecografía</option>
-                                <option value="Gastroenterología">Gatroenterología</option>
+                                <option value="Fisiatría">Fisiatría</option>
+								<option value="Gastroenterología">Gatroenterología</option>
+								<option value="Ginecología">Ginecología</option>
+                                <option value="Hematología">Hematología</option>
                                 <option value="Mastología">Mastología</option>
-                                <option value="Medicina Interna">Medicina Interna</option>
+								<option value="Medicina">Medicina</option>
+								<option value="Medicina Interna">Medicina Interna</option>
                                 <option value="Medicina ocupacional">Medicina ocupacional</option>
-                                <option value= "Nerfrología">Nerfrología</option>
+                                <option value="Nerfrología">Nerfrología</option>
+								<option value="Neurocirugía"> Neurocirugía</option>
+								<option value="Neurología">Neurología</option>
+								<option value="Nutrición">Nutrición</option>
+                                <option value="Odontología">Odontología</option>
+                                <option value="Odontología Pediatría">Odontología Pediátrico</option>
+								<option value="Ortodoncia">Ortodancia</option>
+								<option value="Ortopedia">Ortopedia</option>
+								<option value="Otorrinolaringología">Otorrinolaringología</option>
+								<option value="Pediatría">Pediatría</option>
+								<option value="Pediatría Neonatología">Pediatría Neonatología</option>
+								<option value="Pediodocia">Pediodocia</option>
+                                <option value="Psicología">Psicología</option>
+                                <option value="Psicopedagogía">Psicopedagogía</option>
+								<option value="Psiquiatría">Psiquiatría</option>
+								<option value="Terapia del dolor">Terapia del dolor</option>
+								<option value="Terapia Holística">Terapia Holística </option>
+					            <option value="Traumatología">Traumatología</option>
+					            <option value="Urología">Urología</option>
 
-
-/*Cirugía General, Cirugía carviovascular, de columna, hematología, ecografía, Gastroenterología, Mastología
-Medicina internal, Medicina ocupacional, Nerfrología, Neurocirigía, Neurología, Nutrición,*/
                             </select>
                         </div>
                     </div>
@@ -687,8 +700,6 @@ Medicina internal, Medicina ocupacional, Nerfrología, Neurocirigía, Neurologí
     </div>
     
     <script>
-        
-        
         function agendarCita() {
            
             var cedula = document.getElementById('cedula').value;
@@ -706,17 +717,19 @@ Medicina internal, Medicina ocupacional, Nerfrología, Neurocirigía, Neurologí
                 return;
             }
             
-            var mensaje = "📋 **Resumen de tu cita**\n\n" +
-                         "👤 Datos personales:\n" +
-                         "   Cédula: " + cedula + "\n" +
-                         "   Nombre: " + nombre + " " + apellido + "\n" +
-                         "   Teléfono: " + (telefono || "No especificado") + "\n" +
-                         "   Direccion: " + (direccion || "No especificado") + "\n\n" +
-                         "🏥 Detalles de la cita:\n" +
-                         "   Servicio: " + servicio + "\n" +
-                         "   Doctor: " + doctor + "\n" +
-                         "   Fecha: " + fecha + "\n" +
-                         "   Hora: " + hora + "\n\n" +
+            var mensaje = "Resumen de tu cita\n\n" +
+                         "Datos personales:\n" +
+                         "    Cédula: " + cedula + "\n" +
+                         "    Nombre: " + nombre + " " + apellido + "\n" +
+                         "    Teléfono: " + (telefono || "No especificado") + "\n" +
+                         "    Direccion: " + (direccion || "No especificado") + "\n\n" +
+
+                         "Detalles de la cita:\n" +
+                         "    Servicio: " + servicio + "\n" +
+                         "    Doctor: " + doctor + "\n" +
+                         "    Fecha: " + fecha + "\n" +
+                         "    Hora: " + hora + "\n\n" +
+
                          "✅ ¿Confirmar la reservación de esta cita?";
             
             if (confirm(mensaje)) {
@@ -725,7 +738,6 @@ Medicina internal, Medicina ocupacional, Nerfrología, Neurocirigía, Neurologí
         }
     </script>
     
- 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
 </body>
