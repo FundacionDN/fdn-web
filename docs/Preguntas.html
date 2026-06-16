@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas-FDN</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        .phone-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .top-bar, .bottom-bar {
+            background-color: #1a73e8;
+            height: 28px;
+            width: 100%;
+        }
+
+        header {padding: 15px; position: relative;}
+        .menu-icon {font-size: 24px; cursor: pointer; display: inline-block; margin-bottom: 10px;}
+		
+        .header-flex {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .logo-placeholder {
+            width: 170px;
+            flex-shrink: 0;
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: auto;
+			margin-top: 10px;
+        }
+		
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 0 15px;
+            width: 200px;
+            margin-bottom: 25px;
+			margin-top: 28px;
+        }
+
+        .nav-btn {
+            display: block;
+            text-align: center;
+            padding: 6px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #cccccc;
+            color: #333;
+			cursor: pointer !important;
+        }
+
+        .nav-btn.active {
+            background-color: #1a73e8;
+            color: white;
+        }
+
+        .section-title {
+			margin-right: 190px;
+            color: #1a73e8;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+			margin-top: -300px;
+			margin-left: 204px;
+			font-weight: 800;
+			text-align: justify-content;
+			white-space: nowrap;
+        }
+
+        .section-subtitle-cambios {
+            text-align: right;
+            margin-right: 330px;
+            color: #e91e63;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 800;
+			white-space: nowrap;
+            margin-top: 38px;			
+        }
+		
+		.Preguntatwo {
+		   text-align: right;
+		   margin-right: 245px;
+		   color: #e91e63;
+		   font-size: 20px;
+		   text-transform: uppercase;
+		   margin-bottom: 20px;
+		   font-weight: 800;
+		   white-space: nowrap;
+		   margin-top: 38px;
+		}
+		
+		.Preguntatres {
+		   text-align: right;
+		   margin-right: 245px;
+		   color: #e91e63;
+		   font-size: 20px;
+		   text-transform: uppercase;
+		   margin-bottom: 20px;
+		   font-weight: 800;
+		   white-space: nowrap;
+		   margin-left: 205px;
+		   margin-top: 38px;
+		   
+		}
+		
+		.Preguntacuatro {
+		   text-align: right;
+		   margin-right: 245px;
+		   color: #e91e63;
+		   font-size: 20px;
+		   text-transform: uppercase;
+		   margin-bottom: 20px;
+		   font-weight: 800;
+		   white-space: nowrap;
+		   margin-left: 205px;
+		   margin-top: 38px;
+		}
+
+        .historia-container {
+            display: flex;
+            gap: 20px;
+            margin-left: 205px;
+            margin-right: 20px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .text-content {
+            text-align: justify;
+            font-size: 20px;
+            width: 330px;
+            flex-shrink: 0;
+			width: 100%;
+			line-height: 1;
+        }
+
+        .cambios-section-wrapper {
+            display: flex;
+            gap: 20px;
+            margin-left: 205px;
+            margin-right: 20px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .cambios-imagen {
+            width: 210px;
+            flex-shrink: 0;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-top: 95px;
+        }
+
+        .cambios-imagen img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .cambios-texto-wrapper {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .cambios-container {
+            text-align: justify;
+            font-size: 20px;
+            width: 570px;
+            margin-top: -10px;
+        }
+		
+		.Cambios-dos {
+	        text-align: justify; 
+            font-size: 20px;
+            width:570px;
+            margin-top: -10px;	
+            margin-left: 205px;			
+		}
+		
+		.Cambios-tres {
+		    text-align: justity;
+			font-size: 20px;
+			width: 570px;
+			margin-top: -10px;
+			margin-left: 205px;
+		}
+		
+		.Cambios-cuatro {
+		    text-align: justify;
+			font-size: 20px;
+			width: 570px;
+			margin-top: -10px;
+			margin-left: 205px;
+		}
+
+        .grid-item {
+            text-align: center;
+        }
+
+        .image-box {
+            background-color: #e0e0e0;
+            aspect-ratio: 1 / 1;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .grid-item p {
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .stat-box h3 {
+            font-size: 28px;
+            margin-bottom: 2px;
+        }
+
+        .stat-box p {
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #dbdbdb;
+            padding: 30px;
+            text-align: center;
+            border-radius: 4px;
+            margin-left: 205px;
+            margin-right: 20px;
+            width: auto;
+        }
+
+        footer h4 {
+            color: #1a73e8;
+            font-size: 18px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        footer .slogan {
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 2px;
+        }
+
+        footer .rif {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #b5b5b5;
+            padding-bottom: 10px;
+        }
+
+        .icon-btn {
+            width: 29px;
+            height: 29px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .icon-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .icon-btn img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .schedule-box {
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px;
+            text-align: left;
+            border-radius: 4px;
+            flex-wrap: wrap;
+        }
+
+        .map-icon iframe {
+            width: 200px;
+            height: 180px;
+            border-radius: 4px;
+        }
+
+        .schedule-text h5 {
+            color: #1a73e8;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .schedule-text p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 700px) {
+            .cambios-section-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .cambios-imagen {
+                margin-top: 0px;
+                margin-bottom: 15px;
+            }
+
+            footer {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            
+            .mision-vision-container {
+                margin-left: 20px;
+                margin-right: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .section-title {
+                white-space: normal;
+                margin-left: 20px;
+            }
+               
+            .historia-container {
+                margin-left: 20px;
+            }
+            
+            .cambios-section-wrapper {
+                margin-left: 20px;
+            }
+			
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        <div class="top-bar"></div>
+
+        <header>
+            <div class="menu-icon">&#9776;</div> <div class="header-flex">
+                <div class="logo-placeholder">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqyejBq_bl4C9HAJM5y_4ADLQOqu6_iiAbEQ&s" alt="Logo Fundaci&oacute;n Divino Ni&ntilde;o">
+                </div>
+            </div>
+        </header>
+		
+        <nav class="nav-menu">
+            <a href="Index.html" onclick= "activar (this)" class="nav-btn">Inicio</a>
+            <a href="Historia.html" onclick="activar (this)" class="nav-btn">Historias</a>
+            <a href="Preguntas.html" onclick="activar (this)" class="nav-btn active">Preguntas</a>
+            <a href="Agendar.html" onclick="activar (this)" class="nav-btn">Agendar citas</a>
+        </nav>
+         
+		<div class="text" >
+		    <h1 class="section-title"> Preguntas frecuentes</h1>
+			
+			<div class="historia-container">
+			    <div class="text-content">
+                    <p> ¿Se pueden ver la citas pasadas o futuras?</p>
+                    <p> ¿Comó puedo agendar una cita?</p>
+					<p> ¿Se puede agendar citas para un familiar o amigo?</p>
+					<p> ¿Como realizó la cancelación del servicio? </p>
+			    </div>
+				
+			</div>
+			
+			<div class="cambios-section-wrapper"> 
+			    <div class="cambios-texto-wrapper">
+			        <h2 class="section-subtitle-cambios"> ¿Se pueden ver las citas pasadas o futuras?</h2>
+			        
+			        <div class="cambios-container">
+			            <p> No, no se guarda ningun registro dentro de este sitio web que pueda verificar su citas pasadas o futuras</p>
+			        </div>
+	
+			    </div>
+			</div>
+			
+			<div class="Pregunta dos">
+			    <div class="Cambios-pregunta">
+			      <h2 class="Preguntatwo"> ¿Comó puedo agendar una cita? </h2>
+				  
+				  <div class= "Cambios-dos">
+				      <p> Una vez dentro de nuestro sitio web dirijase a la sesión agendar citas, rellenando los campos correspondientes a la información personal, Luego en la sesión de agendar cita colocar rigurosamente el servicio, el doctor, la fecha y hora en la que puede estar disponible una vez realizado esto se debe enviar la solicitud.</p>
+			      </div>
+				  
+		        </div>
+			</div>
+			
+			<div class="Pregunta tres">
+			    <div class="Cambioss">
+			      <h2 class="Preguntatres"> ¿Se puede agendar citas para un familiar o amigo?</h2>
+				  
+				  <div class= "Cambios-tres">
+				      <p> Si, se puede agendar una cita para un familiar o amigo, siempre y cuando la información suministrada en el sitio web sea precisa</p>
+			      </div>	  
+		        </div>
+			</div>
+			
+			<div class="Pregunta-cuatro">
+			    <div class="Cambiossss">
+			      <h2 class="Preguntacuatro"> ¿Como realizó la cancelación del servicio? </h2>
+				  
+				  <div class= "Cambios-cuatro">
+				      <p> Para cancelar un servicio, debes dirigirte personalmente a las instalaciones de la fundación, específicamente a caja, para realizar el trámite correspondiente.  </p>
+			      </div>
+				  
+		        </div>
+			</div>
+			
+        <footer>
+            <h4>Fundaci&oacute;n Divino Ni&ntilde;o</h4>
+            <p class="slogan">&#161;Servimos con amor!</p>
+            <p class="rif">RIF: J-302892694</p>
+
+            <div class="social-icons">
+                
+                <a href="https://www.instagram.com/fundaciondivinonino" target="_blank" rel="noopener noreferrer" class="icon-btn">
+                   <img src="https://cdn-icons-png.flaticon.com/64/2111/2111463.png" alt="Instagram">
+                </a>
+                
+                <a href="tel:+584120790173" class="icon-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/64/3616/3616215.png" alt="Teléfono">
+                </a>
+                
+                <a href="https://wa.me/584120790173?text=Hola%2C%20vengo%20de%20Fundaci%C3%B3n%20Divino%20Ni%C3%B1o%2C%20necesito%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="icon-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/64/733/733585.png" alt="WhatsApp">
+                </a>
+                
+                <a href="https://twitter.com/divinonino" target="_blank" rel="noopener noreferrer" class="icon-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/64/5969/5969020.png" alt="X">
+                </a>
+            </div>
+
+            <div class="schedule-box">
+                <div class="map-icon">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.660653116728!2d-71.2946066!3d10.2081884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e89d185eefe710d%3A0xb637e90be087a538!2sFundaci%C3%B3n%20Divino%20Ni%C3%B1o!5e0!3m2!1ses-419!2sve!4v1779210406389!5m2!1ses-419!2sve" width="200" height="180" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="schedule-text">
+                    <h5>Horario de Atenci&oacute;n</h5>
+                    <p>Lunes a S&aacute;bado (7:00 am a 5:00 pm)</p>
+                    <p>Domingo: Cerrado</p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="bottom-bar" style="margin-top: 30px;"></div>
+    </div>
+  
+</body>
+</html>
