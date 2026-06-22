@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia-FDN</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <style>
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; 
+            box-sizing: border-box;
         }
 
         body {
@@ -25,19 +27,23 @@
             max-width: 800px;
             background-color: #ffffff;
             min-height: 100vh;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             position: relative;
             padding-bottom: 40px;
         }
 
-        .top-bar, .bottom-bar {
+        .top-bar,
+        .bottom-bar {
             background-color: #1a73e8;
             height: 28px;
             width: 100%;
         }
 
-        header {padding: 15px; position: relative;}
-		
+        header {
+            padding: 15px;
+            position: relative;
+        }
+
         .header-flex {
             display: flex;
             gap: 15px;
@@ -52,9 +58,9 @@
         .logo-placeholder img {
             width: 100%;
             height: auto;
-			margin-top: 10px;
+            margin-top: 10px;
         }
-		
+
         .nav-menu {
             display: flex;
             flex-direction: column;
@@ -62,7 +68,7 @@
             padding: 0 15px;
             width: 200px;
             margin-bottom: 25px;
-			margin-top: 28px;
+            margin-top: 28px;
         }
 
         .nav-btn {
@@ -75,7 +81,7 @@
             font-weight: bold;
             background-color: #cccccc;
             color: #333;
-			cursor: pointer !important;
+            cursor: pointer !important;
         }
 
         .nav-btn.active {
@@ -84,16 +90,16 @@
         }
 
         .section-title {
-			margin-right: 190px;
+            margin-right: 190px;
             color: #1a73e8;
             font-size: 20px;
             text-transform: uppercase;
             margin-bottom: 10px;
-			margin-top: -300px;
-			margin-left: 204px;
-			font-weight: 800;
-			text-align: justify-content;
-			white-space: nowrap;
+            margin-top: -300px;
+            margin-left: 204px;
+            font-weight: 800;
+            text-align: justify-content;
+            white-space: nowrap;
         }
 
         .section-subtitle-cambios {
@@ -104,7 +110,7 @@
             text-transform: uppercase;
             margin-bottom: 20px;
             font-weight: 800;
-			white-space: nowrap;
+            white-space: nowrap;
         }
 
         .historia-container {
@@ -129,7 +135,7 @@
             background-color: #f0f0f0;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .historia-imagen img {
@@ -154,7 +160,7 @@
             background-color: #f0f0f0;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             margin-top: 95px;
         }
 
@@ -163,7 +169,7 @@
             height: auto;
             display: block;
         }
-        
+
         .cambios-texto-wrapper {
             flex: 1;
             min-width: 280px;
@@ -175,8 +181,8 @@
             width: 330px;
             margin-top: -10px;
         }
-		
-		.mision-vision-container {
+
+        .mision-vision-container {
             display: flex;
             gap: 40px;
             margin-left: 205px;
@@ -185,31 +191,33 @@
             margin-bottom: 30px;
             flex-wrap: wrap;
         }
-        
-        .mision-box, .vision-box {
+
+        .mision-box,
+        .vision-box {
             flex: 1;
             min-width: 200px;
         }
-        
+
         .section-mision {
             color: #1a73e8;
             font-size: 20px;
             text-transform: uppercase;
             font-weight: 800;
             margin-bottom: 10px;
-			text-align: center;
+            text-align: center;
         }
-        
+
         .section-vision {
             color: #1a73e8;
             font-size: 20px;
             text-transform: uppercase;
             font-weight: 800;
             margin-bottom: 10px;
-			text-align: center;
+            text-align: center;
         }
-        
-        .text-mision, .text-vision {
+
+        .text-mision,
+        .text-vision {
             text-align: justify;
             font-size: 20px;
         }
@@ -298,11 +306,11 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-			transition: transform 0.3s ease;
+            transition: transform 0.3s ease;
             text-decoration: none;
         }
-		
-		.icon-btn:hover {
+
+        .icon-btn:hover {
             transform: scale(1.1);
         }
 
@@ -347,6 +355,7 @@
                 flex-direction: column;
                 align-items: center;
             }
+
             .cambios-imagen {
                 margin-top: 0px;
                 margin-bottom: 15px;
@@ -356,34 +365,35 @@
                 margin-left: 20px;
                 margin-right: 20px;
             }
-            
+
             .mision-vision-container {
                 margin-left: 20px;
                 margin-right: 20px;
                 flex-direction: column;
                 gap: 20px;
             }
-            
+
             .section-title {
                 white-space: normal;
                 margin-left: 20px;
             }
-            
+
             .section-subtitle-cambios {
                 white-space: normal;
                 margin-right: 20px;
             }
-            
+
             .historia-container {
                 margin-left: 20px;
             }
-            
+
             .cambios-section-wrapper {
                 margin-left: 20px;
             }
         }
     </style>
 </head>
+
 <body>
 
     <div class="phone-container">
@@ -392,7 +402,8 @@
         <header>
             <div class="header-flex">
                 <div class="logo-placeholder">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqyejBq_bl4C9HAJM5y_4ADLQOqu6_iiAbEQ&s" alt="Logo Fundaci&oacute;n Divino Ni&ntilde;o">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqyejBq_bl4C9HAJM5y_4ADLQOqu6_iiAbEQ&s"
+                        alt="Logo Fundaci&oacute;n Divino Ni&ntilde;o">
                 </div>
             </div>
         </header>
@@ -403,71 +414,91 @@
             <a href="/docs/Preguntas.html" onclick="activar(this)" class="nav-btn">Preguntas</a>
             <a href="/docs/Agendar.html" onclick="activar(this)" class="nav-btn">Agendar citas</a>
         </nav>
-         
-		<div class="text" >
-		    <h1 class="section-title"> Historia de la fundación</h1>
-			
-			<div class="historia-container">
-			    <div class="text-content">
-                    <p> Nacio por los inicios de los esposos Taddei Belmonte, para promover el desarrollo espiritual, social y educativo formalizandose como ONG en 1.995 El 25 de Noviembre del año 1.999 se innaguró el santuario divino niño.</p>
-			        <p> M&aacute;s all&aacute; de su origen espiritual, la fundaci&oacute;n se ha convertido en el principal referente de asistencia m&eacute;dica especializada y trabajo social de la Costa Oriental del Lago, brindando servicios de salud integrales y accesibles a precios solidarios.</p>
-			    </div>
 
-			    <div class="historia-imagen">
-			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1e9yua9oUT1R-dn20wlkl5gjaJw2JYyXkiw&s" alt="Imagen de la fundación">
-			    </div>
-			</div>
-			
-			<div class="cambios-section-wrapper">
-			    <div class="cambios-imagen">
-			        <img src="https://media.diarioversionfinal.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-19-at-7.55.09-PM.jpeg" alt="Imagen de cambios de la fundación">
-			    </div>
-			    
-			    <div class="cambios-texto-wrapper">
-			        <h2 class="section-subtitle-cambios"> Cambios que ha tenido</h2>
-			        
-			        <div class="cambios-container">
-			            <p>La evolución institucional de la fundaci&oacute;n se refleja en su transformaci&oacute;n de un centro de asistencia b&aacute;sica a un complejo de especializaci&oacute;n m&eacute;dica y planes de cobertura integral. Este avance se consolid&oacute; mediante la incorporaci&oacute;n de disciplinas de alta complejidad.</p>
-                        <p>Por su parte, su crecimiento ha estado marcado por un fuerte compromiso con la medicina preventiva y la movilizaci&oacute;n social. La fundación expandi&oacute; su impacto fuera de los consultorios mediante la organizaci&oacute;n de conferencias sobre salud mental y grandes eventos comunitarios como el de concientizaci&oacute;n entre estos destaca de manera importante la "Caminata Rosa".</p>
-			        </div>
-			    </div>
-			</div>
-		
+        <div class="text">
+            <h1 class="section-title"> Historia de la fundación</h1>
+
+            <div class="historia-container">
+                <div class="text-content">
+                    <p> Nacio por los inicios de los esposos Taddei Belmonte, para promover el desarrollo espiritual,
+                        social y educativo formalizandose como ONG en 1.995 El 25 de Noviembre del año 1.999 se innaguró
+                        el santuario divino niño.</p>
+                    <p> M&aacute;s all&aacute; de su origen espiritual, la fundaci&oacute;n se ha convertido en el
+                        principal referente de asistencia m&eacute;dica especializada y trabajo social de la Costa
+                        Oriental del Lago, brindando servicios de salud integrales y accesibles a precios solidarios.
+                    </p>
+                </div>
+
+                <div class="historia-imagen">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1e9yua9oUT1R-dn20wlkl5gjaJw2JYyXkiw&s"
+                        alt="Imagen de la fundación">
+                </div>
+            </div>
+
+            <div class="cambios-section-wrapper">
+                <div class="cambios-imagen">
+                    <img src="https://media.diarioversionfinal.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-19-at-7.55.09-PM.jpeg"
+                        alt="Imagen de cambios de la fundación">
+                </div>
+
+                <div class="cambios-texto-wrapper">
+                    <h2 class="section-subtitle-cambios"> Cambios que ha tenido</h2>
+
+                    <div class="cambios-container">
+                        <p>La evolución institucional de la fundaci&oacute;n se refleja en su transformaci&oacute;n de
+                            un centro de asistencia b&aacute;sica a un complejo de especializaci&oacute;n m&eacute;dica
+                            y planes de cobertura integral. Este avance se consolid&oacute; mediante la
+                            incorporaci&oacute;n de disciplinas de alta complejidad.</p>
+                        <p>Por su parte, su crecimiento ha estado marcado por un fuerte compromiso con la medicina
+                            preventiva y la movilizaci&oacute;n social. La fundación expandi&oacute; su impacto fuera de
+                            los consultorios mediante la organizaci&oacute;n de conferencias sobre salud mental y
+                            grandes eventos comunitarios como el de concientizaci&oacute;n entre estos destaca de manera
+                            importante la "Caminata Rosa".</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="mision-vision-container">
                 <div class="mision-box">
                     <h3 class="section-mision">Visión</h3>
                     <div class="text-mision">
-                        <p>Considerarnos como un centro de atención médica y social líder en la región, reconocidos por la excelencia de nuestros servicios de salud y nuestra capacidad de respuesta ante las necesidades de la comunidad.</p>
+                        <p>Considerarnos como un centro de atención médica y social líder en la región, reconocidos por
+                            la excelencia de nuestros servicios de salud y nuestra capacidad de respuesta ante las
+                            necesidades de la comunidad.</p>
                     </div>
                 </div>
-                
+
                 <div class="vision-box">
                     <h3 class="section-vision">Misión</h3>
                     <div class="text-vision">
-                        <p>Brindar atenci&oacute;n m&eacute;dica especializada, servicios de salud integrales y programas de asistencia social bajo accesibles esquemas solidarios, orientados a mejorar la calidad de vida y el bienestrar de las familias vulnerables de la comunidad.</p>
+                        <p>Brindar atenci&oacute;n m&eacute;dica especializada, servicios de salud integrales y
+                            programas de asistencia social bajo accesibles esquemas solidarios, orientados a mejorar la
+                            calidad de vida y el bienestrar de las familias vulnerables de la comunidad.</p>
                     </div>
                 </div>
             </div>
         </div>
-       
+
         <footer>
             <h4>Fundaci&oacute;n Divino Ni&ntilde;o</h4>
             <p class="slogan">&#161;Servimos con amor!</p>
             <p class="rif">RIF: J-302892694</p>
 
             <div class="social-icons">
-                <a href="https://www.instagram.com/fundaciondivinonino" target="_blank" rel="noopener noreferrer" class="icon-btn">
-                   <img src="https://cdn-icons-png.flaticon.com/64/2111/2111463.png" alt="Instagram">
+                <a href="https://www.instagram.com/fundaciondivinonino" target="_blank" rel="noopener noreferrer"
+                    class="icon-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/64/2111/2111463.png" alt="Instagram">
                 </a>
-                
+
                 <a href="tel:+584120790173" class="icon-btn">
                     <img src="https://cdn-icons-png.flaticon.com/64/3616/3616215.png" alt="Teléfono">
                 </a>
-                
-                <a href="https://wa.me/584120790173?text=Hola%2C%20vengo%20de%20Fundaci%C3%B3n%20Divino%20Ni%C3%B1o%2C%20necesito%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="icon-btn">
+
+                <a href="https://wa.me/584120790173?text=Hola%2C%20vengo%20de%20Fundaci%C3%B3n%20Divino%20Ni%C3%B1o%2C%20necesito%20informaci%C3%B3n"
+                    target="_blank" rel="noopener noreferrer" class="icon-btn">
                     <img src="https://cdn-icons-png.flaticon.com/64/733/733585.png" alt="WhatsApp">
                 </a>
-                
+
                 <a href="https://twitter.com/divinonino" target="_blank" rel="noopener noreferrer" class="icon-btn">
                     <img src="https://cdn-icons-png.flaticon.com/64/5969/5969020.png" alt="X">
                 </a>
@@ -475,7 +506,9 @@
 
             <div class="schedule-box">
                 <div class="map-icon">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.660653116728!2d-71.2946066!3d10.2081884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e89d185eefe710d%3A0xb637e90be087a538!2sFundaci%C3%B3n%20Divino%20Ni%C3%B1o!5e0!3m2!1ses-419!2sve!4v1779210406389!5m2!1ses-419!2sve" width="200" height="180" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.660653116728!2d-71.2946066!3d10.2081884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e89d185eefe710d%3A0xb637e90be087a538!2sFundaci%C3%B3n%20Divino%20Ni%C3%B1o!5e0!3m2!1ses-419!2sve!4v1779210406389!5m2!1ses-419!2sve"
+                        width="200" height="180" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class="schedule-text">
                     <h5>Horario de Atenci&oacute;n</h5>
@@ -487,6 +520,7 @@
 
         <div class="bottom-bar" style="margin-top: 30px;"></div>
     </div>
-	
+
 </body>
+
 </html>
